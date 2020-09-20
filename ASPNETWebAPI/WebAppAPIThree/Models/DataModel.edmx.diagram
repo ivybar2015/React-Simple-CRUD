@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0503373876b541f0b1c42629e9cb4477" Name="Diagram1">
+        <EntityTypeShape EntityType="DataModel.ProductCategory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.ProductColor" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Product" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.PotCategory" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.PotColor" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DataModel.PotPlant" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DataModel.PotPrice" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DataModel.PotSize" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DataModel.User" Width="1.5" PointX="3.625" PointY="3.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
