@@ -70,8 +70,8 @@ namespace WebAppAPIThree.Controllers
             try
             {
 
-                // user pointer to check if username and password is matching
-                var record = dbase.Users.Where(col => col.Username == user.Username &&  col.Password == user.Password).FirstOrDefault();
+        // user pointer to check if username and password is matching
+        var record = dbase.Users.Where(col => col.Username == user.Username &&  col.Password == user.Password).FirstOrDefault();
 
                 if (record == null)
                 {
@@ -103,9 +103,10 @@ namespace WebAppAPIThree.Controllers
             try
             {  // create a new OBJECT to store new user information
                 User tableRecord = new User();
-                    tableRecord.Username = postUser.username;
-                    tableRecord.FirstName = postUser.firstname;
-                    tableRecord.LastName = postUser.lastname;
+                    tableRecord.Username = postUser.Username;
+                    tableRecord.Password = postUser.Password;
+                    tableRecord.FirstName = postUser.FirstName;
+                    tableRecord.LastName = postUser.LastName;
                     tableRecord.IsActive = true;
                     tableRecord.DateCreated = DateTime.Now;
 
@@ -125,8 +126,8 @@ namespace WebAppAPIThree.Controllers
         }
 
         // get/search a single user record
-        [HttpPost]
-        [Route("searchUser/{userid}")]
+        /*[HttpPost]
+        [Route("searchUser")]
         public object SearchUser(int userid)
         {
 
@@ -149,6 +150,37 @@ namespace WebAppAPIThree.Controllers
             }
 
         }
+        */
+
+        [HttpGet]
+        [Route("search/{searchStr}")]
+        public object SearchUsers(string searchStr)
+        {
+            try
+            {
+               var userRes = dbase.Users.Where(col => col.Username.Contains(searchStr) || col.FirstName.Contains(searchStr) || col.LastName.Contains(searchStr)).ToList();
+                var results = from m in userRes
+                              select new UserResult()
+                              {
+                                  Id = m.Id,
+                                  Username = m.Username,
+                                  FirstName = m.FirstName,
+                                  LastName = m.LastName
+
+                              };
+                    return new {  data = results };
+                
+
+            }
+            catch (Exception)
+            {
+
+                return new { status = 401, msg = "cannot get data" };
+            }
+        }
+
+
+        /// //////////////////////////////////////////
 
         // update/edit record already existed
         [HttpPost]
@@ -163,9 +195,9 @@ namespace WebAppAPIThree.Controllers
                 if(tableRecord != null)
                 {
                  
-                    tableRecord.Username = postUser.username;
-                    tableRecord.FirstName = postUser.firstname;
-                    tableRecord.LastName = postUser.lastname;
+                    tableRecord.Username = postUser.Username;
+                    tableRecord.FirstName = postUser.FirstName;
+                    tableRecord.LastName = postUser.LastName;
                     // save the changing data table
                     dbase.SaveChanges();
                     return new { status = 200 , msg = "Success", dbase = tableRecord };
