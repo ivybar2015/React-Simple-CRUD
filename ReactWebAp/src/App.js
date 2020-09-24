@@ -49,14 +49,10 @@ class App extends Component {
             {/* <Route path="/" component={Welcome} />*/}
             <Route path="/home" component={Home} />
             <Route path="/listuser" component={ListUser} />
-            <Route path="/edit/:id" component={Edit} />
-
+            <Route path="/edit/:id/:userName/:firstName/:lastName" component={Edit} />
             <Route path="/delete/:id" component={Delete} />
             <Route path="/search" component={Search} />
-
-
             <Route path="/login" component={Login} />
-
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contacts} />
             <Route path="/mcard" component={MatCard} />

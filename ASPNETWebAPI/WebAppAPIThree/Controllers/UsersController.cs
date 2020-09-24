@@ -221,39 +221,40 @@ namespace WebAppAPIThree.Controllers
         {
             try
             {
-                 var tableRecord = dbase.Users.Find(userid);
+                var tableRecord = dbase.Users.Find(userid);
 
                 if (tableRecord != null)
-                 {
-                     tableRecord.IsActive = false;
-                    // remove user infor matched id
-                     dbase.Users.Remove(tableRecord);
-                    //  save the changing data table
+                {
+                    tableRecord.IsActive = false;
+                    //   remove user infor matched id
+                    dbase.Users.Remove(tableRecord);
+                    // save the changing data table
                     dbase.SaveChanges();
 
-                  return new { msg = " Record Delete" };
+                    return new { msg = " Record Delete" };
 
-                 }
+                }
                 return null;
+            }
 
-
-                //var obj = dbase.Users.Where(x => x.Id == userid).ToList().FirstOrDefault();
-                // remove user infor matched id
-                //  dbase.Users.Remove(obj);
-                // dbase.SaveChanges();
-                //  return new 
-                //  {
-                //      Status = "Delete",
-                //      Message = "Delete Successfuly",
-                //      dbase = dbase
-                //   };
+            /*
+                var obj = dbase.Users.Where(x => x.Id == userid).ToList().FirstOrDefault();
+               //  remove user infor matched id
+                 dbase.Users.Remove(obj);
+                 dbase.SaveChanges();
+                  return new 
+                 {
+                      msg = "Recored Deleted ", dbase = dbase
+                  };
 
             }
+            */
             catch (Exception e)
             {
                 return new { status = 404, msg = "Error" + e.InnerException };
 
             }
+            
 
         }
 

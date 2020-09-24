@@ -57,7 +57,7 @@ class ListUser extends Component {
                                     return <tr key={index.Id}>
                                         <td >
                                             {/*{`/edit/${index.Id}`}  is go to path /edit  include Id whenevr hit edit button*/}
-                                            <Link to={`/edit/${index.Id}`} >
+                                            <Link to={`/edit/${index.Id}/${index.UserName}/${index.FirstName}/${index.LastName}`} >
                                                 <Button color="primary">
                                                     <EditIcon />
                                                 </Button>

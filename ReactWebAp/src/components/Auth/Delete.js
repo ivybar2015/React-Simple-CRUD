@@ -5,11 +5,18 @@ import axios from "axios";
 
 
 function Delete(props) {
-    // get url and id 
-    const apiurl = "http://localhost:62458/api/user/delete?userid=" + props.match.params.id;
+    // get url and id
+    // http://localhost:62458/api/user/delete
+    //   const apiurl = "http://localhost:62458/api/user/delete?userid=" + props.match.params.id;
+    const getid = props.match.params.id;
+    console.log(getid);
+    const apiurl = "http://localhost:62458/api/user/delete?userid=" + getid;
     axios.post(apiurl)
         .then(res => {
             console.log(res.dbase)
+
+
+
         })
     return (
         <div>
@@ -24,3 +31,5 @@ function Delete(props) {
 }
 
 export default Delete;
+
+

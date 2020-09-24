@@ -14,11 +14,10 @@ class Edit extends Component {
             //  username: "",
             //    firstname: "",
             //  lastname: "",
-            //get id passe
-
-            //   Username: this.props.match.getdata.Username,
-            // FirstName: this.props.getdata
-            //  LastName: this.props.getdata.LastName
+            Id: this.props.match.params.id,
+            Username: this.props.match.params.userName,
+            FirstName: this.props.match.params.firstName,
+            LastName: this.props.match.params.lastName
         };
 
         // let bind to funtion update value
@@ -26,7 +25,8 @@ class Edit extends Component {
         this.firstName = this.firstName.bind(this);
         this.lastName = this.lastName.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-        this.handleCancel = this.handleCancel.bind(this);
+        this.onCancel = this.onCancel.bind(this);
+
     }
 
     userName(event) {
@@ -41,10 +41,6 @@ class Edit extends Component {
         this.setState({ LastName: event.target.value });
     }
 
-    handleCancel() {
-        //   this.setState({ username: event.target.value });
-        this.props.history.push('/listuser')
-    }
     onSubmit(event) {
         // We can use the `useParams` hook here to access the dynamic pieces of the URL.
 
@@ -53,11 +49,7 @@ class Edit extends Component {
         const recored = {
 
             //get id passe
-            // Id: this.props.match.params.id,
-            // Username: this.props.match.params.Username,
-            // FirstName: this.props.match.params.FirstName,
-            // LastName: this.props.match.params.LastName
-            Id: this.props.match.params.id,
+            Id: this.state.Id,
             Username: this.state.Username,
             FirstName: this.state.FirstName,
             LastName: this.state.LastName
@@ -73,6 +65,12 @@ class Edit extends Component {
 
             })
     }
+
+    onCancel() {
+        //  event.preventDefault();
+        this.props.history.push('/listuser')
+    }
+
     render() {
         return (
             <div className="input-form">
@@ -82,16 +80,15 @@ class Edit extends Component {
                             <label> User Name  </label>
                             <input
                                 type="text"
-                                id="username"
+                                id="Username"
                                 // holde current value
                                 value={this.state.Username}
                                 // name have to match with username of state and will hole username 'input'
                                 name="Username"
+                                placeholder="User Name"
                                 // after got input call  handleChange() and  passing  'event'
-                                onChange={this.Username}
+                                onChange={this.userName}
                             ></input>
-                            <br></br>
-
                         </div>
                         <di>
                             <label> First Name  </label>
@@ -101,13 +98,12 @@ class Edit extends Component {
                                 // holde current value
                                 value={this.state.FirstName}
                                 // name have to match with username of state and will hole username 'input'
-                                name="Firstname"
+                                name="FirstName"
+                                placeholder="User Name"
                                 // after got input call  handleChange() and  passing  'event'
-                                onChange={this.FirstName}
+                                onChange={this.firstName}
                             ></input>
                         </di>
-                        <br></br>
-
                         <div>
                             <label> Last Name  </label>
                             <input
@@ -117,8 +113,9 @@ class Edit extends Component {
                                 value={this.state.LastName}
                                 // name have to match with username of state and will hole username 'input'
                                 name="LastName"
+                                placeholder="Last Name"
                                 // after got input call  handleChange() and  passing  'event'
-                                onChange={this.LastName}
+                                onChange={this.lastName}
                             ></input>
                             <br></br>
                         </div>
@@ -133,9 +130,11 @@ class Edit extends Component {
                                 value="submit"
                             ></input>
 
-                            <button onClick={this.handleCancel}>Cancel </button>
+                            <button onClick={this.onCancel}>Cancel </button>
 
                         </div>
+
+
                     </form>
 
                 </React.Fragment>
@@ -144,3 +143,4 @@ class Edit extends Component {
     }
 }
 export default Edit;
+
