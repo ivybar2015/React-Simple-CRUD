@@ -1,0 +1,16 @@
+
+.input-form
+{
+    text-align: left;
+    /* button on the right of form */
+    display: flex;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+
+}
+.text-right{
+    text-align: right;
+    color: blue;
+
+}
