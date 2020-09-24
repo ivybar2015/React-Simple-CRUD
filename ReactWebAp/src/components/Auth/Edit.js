@@ -119,7 +119,6 @@ class Edit extends Component {
                             ></input>
                             <br></br>
                         </div>
-
                         <br />
                         {/* put button on the form 'finished' */}
                         <div className="text-right"   >
