@@ -15,7 +15,7 @@ class Edit extends Component {
             //    firstname: "",
             //  lastname: "",
             //get id passe
-            Id: this.props.match.params.id,
+
             //   Username: this.props.match.getdata.Username,
             // FirstName: this.props.getdata
             //  LastName: this.props.getdata.LastName
@@ -57,8 +57,7 @@ class Edit extends Component {
             // Username: this.props.match.params.Username,
             // FirstName: this.props.match.params.FirstName,
             // LastName: this.props.match.params.LastName
-            Id: this.state.Id,
-
+            Id: this.props.match.params.id,
             Username: this.state.Username,
             FirstName: this.state.FirstName,
             LastName: this.state.LastName

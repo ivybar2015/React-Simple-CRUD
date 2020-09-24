@@ -85,6 +85,7 @@ class Register extends Component {
               // after got input then pass 'event' into handleChange()
               onChange={this.handleInput}
             ></input>
+
           </div>
           <br></br>
           <div>
