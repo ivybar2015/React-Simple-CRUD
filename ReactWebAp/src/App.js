@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import MaterialLayout from "./components/MaterialLayout/MaterialLayout";
 //import { Router, Route, Link, browserHistory, IndexRoute } from "react-router";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Home from "./components/Layout/Home";
-//import Welcome from "./components/Layout/Welcome";
 import ListUser from "./components/Layout/ListUser";
 import About from "./components/Layout/About";
-//import Welcome from "./components/Layout/Welcome";
+import Welcome from "./components/Layout/Welcome";
 import Contacts from "./components/Layout/Contacts";
 import Register from "./components/Auth/Register";
 import Search from "./components/Auth/search";
@@ -18,11 +17,6 @@ import MatCard from "./components/MatCard/MatCard";
 import Edit from "./components/Auth/Edit";
 import Delete from "./components/Auth/Delete";
 
-
-
-
-
-//import picture from "./welcomepage.jpg";
 
 class App extends Component {
   constructor(props) {
@@ -42,11 +36,13 @@ class App extends Component {
       <BrowserRouter>
         {/* get MaterialLayout first then MaterialLayout will connect all the path of its component*/}
         <MaterialLayout />
+
         <Switch>
           <div className="container">
             {/* {About} {Contacts} {MatCard} are for component*/}
             {/* use 'LINK' to connect the pahts*/}
-            {/* <Route path="/" component={Welcome} />*/}
+            {/* go dedirect to url  home */}
+            <Route exact path="/" component={() => (<Redirect to="/home" />)} />
             <Route path="/home" component={Home} />
             <Route path="/listuser" component={ListUser} />
             <Route path="/edit/:id" component={Edit} />
@@ -57,6 +53,7 @@ class App extends Component {
             <Route path="/contact" component={Contacts} />
             <Route path="/mcard" component={MatCard} />
             <Route path="/register" component={Register} />
+
           </div>
         </Switch>
       </BrowserRouter>
@@ -64,5 +61,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

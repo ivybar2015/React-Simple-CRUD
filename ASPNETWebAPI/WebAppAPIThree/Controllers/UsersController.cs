@@ -125,9 +125,9 @@ namespace WebAppAPIThree.Controllers
 
         }
 
-        // get/search a single user record
-        /*[HttpPost]
-        [Route("searchUser")]
+        //get/search a single user record
+        [HttpPost]
+        [Route("searchSingleId")]
         public object SearchUser(int userid)
         {
 
@@ -150,7 +150,7 @@ namespace WebAppAPIThree.Controllers
             }
 
         }
-        */
+     
 
         [HttpGet]
         [Route("search/{searchStr}")]

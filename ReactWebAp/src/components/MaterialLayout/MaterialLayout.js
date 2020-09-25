@@ -19,7 +19,6 @@ import ListIcon from '@material-ui/icons/List';
 import SearchIcon from "@material-ui/icons/Search"
 //import EditIcon from "@material-ui/icons/Edit";
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
-import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 // TO LINK ALL PATH
 import { Link } from "react-router-dom";
@@ -74,7 +73,7 @@ export default function MaterialLayout() {
       >
         <Toolbar />
         <div className={classes.drawerContainer}>
-          <List>
+          <List >
             {/* ///////////////////// */}
             {/* "/home" is path name and use 'link'  to connect the component of its path*/}
             <ListItem button component={Link} to="/home">

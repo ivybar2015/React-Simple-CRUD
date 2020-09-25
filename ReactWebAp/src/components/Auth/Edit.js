@@ -2,6 +2,8 @@ import React, { Component } from "react";
 //import BrowserRouter from "react-router-dom";
 import axios from "axios";
 import "./authlayout.css";
+import Button from '@material-ui/core/Button';
+
 
 class Edit extends Component {
     constructor(props) {
@@ -90,7 +92,8 @@ class Edit extends Component {
                                 onChange={this.userName}
                             ></input>
                         </div>
-                        <di>
+                        <br></br>
+                        <div>
                             <label> First Name  </label>
                             <input
                                 type="text"
@@ -103,7 +106,7 @@ class Edit extends Component {
                                 // after got input call  handleChange() and  passing  'event'
                                 onChange={this.firstName}
                             ></input>
-                        </di>
+                        </div>
                         <div>
                             <label> Last Name  </label>
                             <input
@@ -129,7 +132,7 @@ class Edit extends Component {
                                 value="submit"
                             ></input>
 
-                            <button onClick={this.onCancel}>Cancel </button>
+                            <button onClick={this.onCancel} >Cancel </button>
 
                         </div>
 
