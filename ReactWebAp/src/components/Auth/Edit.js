@@ -2,24 +2,20 @@ import React, { Component } from "react";
 //import BrowserRouter from "react-router-dom";
 import axios from "axios";
 import "./authlayout.css";
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 
 
 class Edit extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            // usernname and password have to match with variable name declared at web api
-            // declare  list
-            //  data: [],
-            //  Id: props.match.params.id,
-            //  username: "",
-            //    firstname: "",
-            //  lastname: "",
             Id: this.props.match.params.id,
-            Username: this.props.match.params.userName,
-            FirstName: this.props.match.params.firstName,
-            LastName: this.props.match.params.lastName
+            Username: "",
+            FirstName: "",
+            LastName: "",
+            isEdit: false,
+
+
         };
 
         // let bind to funtion update value
@@ -45,11 +41,9 @@ class Edit extends Component {
 
     onSubmit(event) {
         // We can use the `useParams` hook here to access the dynamic pieces of the URL.
-
         event.preventDefault();
         const apiurl = "http://localhost:62458/api/user/update";
         const recored = {
-
             //get id passe
             Id: this.state.Id,
             Username: this.state.Username,
@@ -61,7 +55,8 @@ class Edit extends Component {
         axios.post(apiurl, recored)
             .then(res => {
                 console.log(res.dbase)
-                //this.setState({ data: res.data.dbase })
+
+                this.setState({ isEdit: true });
                 // go to listuser page
                 this.props.history.push('/listuser')
 
@@ -69,7 +64,6 @@ class Edit extends Component {
     }
 
     onCancel() {
-        //  event.preventDefault();
         this.props.history.push('/listuser')
     }
 
@@ -107,6 +101,7 @@ class Edit extends Component {
                                 onChange={this.firstName}
                             ></input>
                         </div>
+                        <br></br>
                         <div>
                             <label> Last Name  </label>
                             <input

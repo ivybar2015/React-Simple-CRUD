@@ -15,8 +15,6 @@ function Delete(props) {
         .then(res => {
             console.log(res.dbase)
 
-
-
         })
     return (
         <div>

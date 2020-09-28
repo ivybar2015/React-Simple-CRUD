@@ -10,7 +10,7 @@ class Login extends Component {
       // usernname and password have to match with variable name declared at web api
       Username: "",
       Password: "",
-      isVisible: true,
+
     };
     //this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,6 +33,7 @@ class Login extends Component {
     const data = {
       Username: this.state.Username,
       Password: this.state.Password,
+
     };
 
     // getting  data from out of 'state' to add to table database
@@ -49,7 +50,7 @@ class Login extends Component {
           localStorage.setItem('UserId', result.data.userid);
           console.log("SUCCESS");
           // get to another page
-          this.props.history.push("./about");
+          this.props.history.push(`/about`);
         }
         else {
           alert("Invalid User");
@@ -57,7 +58,6 @@ class Login extends Component {
       });
   }
   ///////////////////////////////////////////////////////////
-
   render() {
     return (
       <React.Fragment>

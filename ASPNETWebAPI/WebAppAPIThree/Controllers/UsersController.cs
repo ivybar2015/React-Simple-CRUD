@@ -76,7 +76,7 @@ namespace WebAppAPIThree.Controllers
                 if (record == null)
                 {
                     // No Match
-                    return new { status = "401", message = "Invalid Login" };
+                    return new { status = "401", message = "Invalid Login"};
                 }
                 else
                 {
@@ -126,7 +126,8 @@ namespace WebAppAPIThree.Controllers
         }
 
         //get/search a single user record
-        [HttpPost]
+        //[HttpPost]
+        [HttpGet]
         [Route("searchSingleId")]
         public object SearchUser(int userid)
         {

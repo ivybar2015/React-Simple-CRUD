@@ -77,10 +77,7 @@ export default function MaterialLayout() {
             {/* ///////////////////// */}
             {/* "/home" is path name and use 'link'  to connect the component of its path*/}
             <ListItem button component={Link} to="/home">
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
+
             </ListItem>
             {/* ///////////////////// */}
 
