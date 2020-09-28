@@ -4,8 +4,9 @@ import "./App.css";
 import MaterialLayout from "./components/MaterialLayout/MaterialLayout";
 //import { Router, Route, Link, browserHistory, IndexRoute } from "react-router";
 
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Layout/Home";
+import Welcome from "./components/Layout/Welcome";
 import ListUser from "./components/Layout/ListUser";
 import About from "./components/Layout/About";
 import Contacts from "./components/Layout/Contacts";
@@ -40,19 +41,23 @@ class App extends Component {
           <div className="container-app">
             <Switch>
               {/* {About} {Contacts} {MatCard} are for component*/}
-              {/* use 'LINK' to connect the pahts*/}
-              {/* go dedirect to url  home */}
+              {/* use 'LINK' to connect the paths*/}
+              {/* go dedirect to url  home 
               <Route exact path="/" component={() => (<Redirect to="/home" />)} />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/listuser" component={ListUser} />
-              <Route exact path="/edit/:id" component={Edit} />
-              <Route exact path="/delete/:id" component={Delete} />
-              <Route exact path="/search" component={Search} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contacts} />
-              <Route exact path="/mcard" component={MatCard} />
-              <Route exact path="/register" component={Register} />
+              */}
+              {/* use EXACT  to go exact path*/}
+              <Route path="/" exact component={Welcome} />
+              <Route path="/home" component={Home} />
+              {/*  path="/listuser" is path of url */}
+              <Route path="/listuser" component={ListUser} />
+              <Route path="/edit/:id" component={Edit} />
+              <Route path="/delete/:id" component={Delete} />
+              <Route path="/search" component={Search} />
+              <Route path="/login" component={Login} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contacts} />
+              <Route path="/mcard" component={MatCard} />
+              <Route path="/register" component={Register} />
 
             </Switch>
           </div>

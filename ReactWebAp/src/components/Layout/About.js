@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from "react";
 
-import picture from "./house.jpg";
+import picture from "./Pictures/house.jpg";
 
 function About() {
   return (

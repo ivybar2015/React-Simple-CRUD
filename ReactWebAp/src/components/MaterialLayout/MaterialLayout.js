@@ -14,7 +14,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-//import HomeIcon from "@material-ui/icons/Home";
+import HomeIcon from "@material-ui/icons/Home";
 import ListIcon from '@material-ui/icons/List';
 import SearchIcon from "@material-ui/icons/Search"
 //import EditIcon from "@material-ui/icons/Edit";
@@ -77,6 +77,10 @@ export default function MaterialLayout() {
             {/* ///////////////////// */}
             {/* "/home" is path name and use 'link'  to connect the component of its path*/}
             <ListItem button component={Link} to="/home">
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
 
             </ListItem>
             {/* ///////////////////// */}
