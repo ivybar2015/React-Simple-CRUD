@@ -49,7 +49,7 @@ class App extends Component {
               <Route exact path="/delete/:id" component={Delete} />
               <Route exact path="/search" component={Search} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/about/:id" component={About} />
+              <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contacts} />
               <Route exact path="/mcard" component={MatCard} />
               <Route exact path="/register" component={Register} />

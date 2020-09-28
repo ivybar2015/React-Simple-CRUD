@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-//import home from "./components/Layout/Home";
 
 
 class Login extends Component {
@@ -46,11 +45,11 @@ class Login extends Component {
         console.log(result.data.status);
         //console.log(result.Status);
         if (result.data.status === "201") {
-          localStorage.setItem('isAuthenticated', 'Y');
-          localStorage.setItem('UserId', result.data.userid);
+          //  localStorage.setItem('isAuthenticated', 'Y');
+          // localStorage.setItem('UserId', result.data.userid);
           console.log("SUCCESS");
           // get to another page
-          this.props.history.push(`/about`);
+          this.props.history.push('/about')
         }
         else {
           alert("Invalid User");

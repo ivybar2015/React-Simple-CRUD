@@ -7,8 +7,8 @@ function About() {
   return (
     <div className="welcome-pic">
       <img src={picture} height="40%" width="70%" alt="picture" />
+
     </div>
   );
 }
-
 export default About;
