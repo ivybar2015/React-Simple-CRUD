@@ -450,3 +450,4 @@ E:\IVY\React-Simple-CRUD\ASPNETWebAPI\WebAppAPIThree\obj\Debug\WebAppAPIThree.cs
 E:\IVY\React-Simple-CRUD\ASPNETWebAPI\WebAppAPIThree\obj\Debug\WebAppAPIThree.csproj.CopyComplete
 E:\IVY\React-Simple-CRUD\ASPNETWebAPI\WebAppAPIThree\obj\Debug\WebAppAPIThree.dll
 E:\IVY\React-Simple-CRUD\ASPNETWebAPI\WebAppAPIThree\obj\Debug\WebAppAPIThree.pdb
+E:\IVY\React-Simple-CRUD\ASPNETWebAPI\WebAppAPIThree\obj\Debug\WebAppAPIThree.csprojAssemblyReference.cache

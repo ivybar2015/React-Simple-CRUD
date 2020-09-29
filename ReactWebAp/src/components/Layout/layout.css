@@ -1,1 +1,15 @@
-/* Class */
+
+
+/* put each block enxt each other */ 
+.floatLeftIvyStyle { 
+    width: 60%;
+    height: auto;
+    padding: 6px;
+    float: initial;
+    transform: translate(.5s);
+}
+/* hover to zoom WHEN MOVE THE MOSE ON IT */
+.floatLeftIvyStyle:hover { 
+    transform: scale(1.5); /* Zooms in 1.5 time (size of the pic) */
+    cursor: pointer; /* show finger icon when hover the pic*/
+}
