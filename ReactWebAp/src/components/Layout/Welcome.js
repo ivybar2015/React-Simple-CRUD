@@ -9,7 +9,7 @@ import pic from "./Pictures/welcomepage.jpg";
 function Wecome() {
     return (
         // eslint-disable-next-line react/jsx-no-comment-textnodes
-        <div >
+        <div className="welcome-pic">
             <img src={pic} className="floatLeftIvyStyle" />
         </div>
     );

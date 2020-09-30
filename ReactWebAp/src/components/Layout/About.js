@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from "react";
+import "./layout.css";
 
 import picture from "./Pictures/house.jpg";
 

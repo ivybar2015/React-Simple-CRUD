@@ -49,15 +49,15 @@ class App extends Component {
               <Route path="/" exact component={Welcome} />
               <Route path="/home" component={Home} />
               {/*  path="/listuser" is path of url */}
-              <Route path="/listuser" component={ListUser} />
-              <Route path="/edit/:id" component={Edit} />
-              <Route path="/delete/:id" component={Delete} />
-              <Route path="/search" component={Search} />
-              <Route path="/login" component={Login} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contacts} />
-              <Route path="/mcard" component={MatCard} />
-              <Route path="/register" component={Register} />
+              <Route path="/listuser" exact component={ListUser} />
+              <Route path="/edit/:id" exact component={Edit} />
+              <Route path="/delete/:id" exact component={Delete} />
+              <Route path="/search" exact component={Search} />
+              <Route path="/login" exact component={Login} />
+              <Route path="/about" exact component={About} />
+              <Route path="/contact" exact component={Contacts} />
+              <Route path="/mcard" exact component={MatCard} />
+              <Route path="/register" exact component={Register} />
 
             </Switch>
           </div>

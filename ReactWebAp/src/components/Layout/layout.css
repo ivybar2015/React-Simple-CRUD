@@ -2,9 +2,11 @@
 
 /* put each block enxt each other */ 
 .floatLeftIvyStyle { 
-    width: 60%;
+    margin:  20px;
+    border: 10px solid black;
+    padding: 8px;
+    width: 40%;
     height: auto;
-    padding: 6px;
     float: initial;
     transform: translate(.5s);
 }
